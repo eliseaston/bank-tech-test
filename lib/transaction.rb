@@ -1,10 +1,10 @@
 class Transaction
 
-  def initialize(trans_type, amount, balance, date=Time.now)
+  def initialize(trans_type, amount, balance, date=Time.now.strftime("%d/%m/%Y"))
     @trans_type = trans_type
     @amount = amount
     @balance = balance
-    @date = date.strftime("%d/%m/%Y")
+    @date = date
   end
 
   def create
