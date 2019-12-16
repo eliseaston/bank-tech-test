@@ -2,24 +2,26 @@ class Account
 
   def initialize
     @balance = 0
+    @statement = []
   end
 
   def deposit(amount)
     @balance += amount
+    transaction_data = [Time.now.strftime("%d/%m/%Y"), "%.2f" % amount, "", "%.2f" % @balance]
+    transaction = transaction_data.join(" || ")
+    @statement.push(transaction)
   end
 
   def withdraw(amount)
     @balance -= amount
+    transaction_data = [Time.now.strftime("%d/%m/%Y"), "", "%.2f" % amount, "%.2f" % @balance]
+    transaction = transaction_data.join(" || ")
+    @statement.push(transaction)
   end
 
   def print_statement
-    if @balance == 100
-      "date || credit || debit || balance\n16/12/2019 || 100.00 ||  || 100.00"
-    elsif @balance == -100
-      "date || credit || debit || balance\n16/12/2019 || || 100.00 || -100.00"
-    else
-    "date || credit || debit || balance"
-    end
+    printed_statement = @statement.join("\n")
+    "date || credit || debit || balance\n#{printed_statement}"
   end
 
 end

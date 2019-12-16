@@ -33,7 +33,7 @@ account.deposit(100)      =>          date || credit || debit || balance
 account.withdraw(100)     =>          date || credit || debit || balance
                                       16/12/2019 || || 100.00 || -100.00
 
-account.deposit(500)
+account.deposit(100)
 account.withdraw(100)     =>          date || credit || debit || balance
-                                      16/12/2019 || 500.00 ||  || 500.00
-                                      16/12/2019 || || 100.00 || 400.00
+                                      16/12/2019 || 100.00 ||  || 100.00
+                                      16/12/2019 || || 100.00 || 0.00
