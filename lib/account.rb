@@ -7,16 +7,14 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    transaction_data = [Time.now.strftime("%d/%m/%Y "), " %.2f " % amount, " ", " %.2f" % @balance]
-    transaction = transaction_data.join("||")
-    @statement.push(transaction)
+    deposit = Transaction.new("deposit", amount, @balance)
+    @statement.push(deposit.create)
   end
 
   def withdraw(amount)
     @balance -= amount
-    transaction_data = [Time.now.strftime("%d/%m/%Y "), " ", " %.2f " % amount, " %.2f" % @balance]
-    transaction = transaction_data.join("||")
-    @statement.push(transaction)
+    withdrawal = Transaction.new("withdrawal", amount, @balance)
+    @statement.push(withdrawal.create)
   end
 
   def print_statement
