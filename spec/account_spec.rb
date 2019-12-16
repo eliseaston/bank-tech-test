@@ -13,4 +13,10 @@ describe Account do
     expect(my_account.print_statement).to eq("date || credit || debit || balance\n16/12/2019 || 100.00 ||  || 100.00")
   end
 
+  it 'prints one line of activity on statement when user withdraws 100' do
+    my_account = Account.new
+    my_account.withdraw(100)
+    expect(my_account.print_statement).to eq("date || credit || debit || balance\n16/12/2019 || || 100.00 || -100.00")
+  end
+
 end
