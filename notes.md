@@ -13,7 +13,24 @@ And a withdrawal of 500 on 14-01-2012
 When she prints her bank statement
 Then she would see:
 
-```date || credit || debit || balance
+```
+date || credit || debit || balance
 14/01/2012 || || 500.00 || 2500.00
 13/01/2012 || 2000.00 || || 3000.00
-10/01/2012 || 1000.00 || || 1000.00```
+10/01/2012 || 1000.00 || || 1000.00
+```
+
+
+**Tests**
+
+INPUT                     =>          OUTPUT
+account.deposit(100)      =>          date || credit || debit || balance
+                                      16/12/2019 || 100.00 ||  || 100.00
+
+account.withdraw(100)     =>          date || credit || debit || balance
+                                      16/12/2019 || || 100.00 || -100.00
+
+account.deposit(500)
+account.withdraw(100)     =>          date || credit || debit || balance
+                                      16/12/2019 || 500.00 ||  || 500.00
+                                      16/12/2019 || || 100.00 || 400.00
