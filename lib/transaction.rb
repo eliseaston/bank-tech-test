@@ -7,7 +7,7 @@ class Transaction
     @date = date
   end
 
-  def create
+  def format
     if @trans_type == "withdrawal"
       transaction_data = ["#{@date} ", " ", " %.2f " % @amount, " %.2f" % @balance]
     elsif @trans_type == "deposit"

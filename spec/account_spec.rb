@@ -23,13 +23,11 @@ describe Account do
     expect(my_account.print_statement).to eq("date || credit || debit || balance\n16/12/2019 || || 100.00 || 0.00\n16/12/2019 || 100.00 || || 100.00")
   end
 
-  it 'prints statement from acceptance criteria with multiple deposits and withdrawal with today date' do
+  it 'prints statement with multiple deposits and withdrawal, with today date' do
     my_account.deposit(1000)
     my_account.deposit(2000)
     my_account.withdraw(500)
-    # expect(my_account.print_statement).to eq("date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00")
     expect(my_account.print_statement).to eq("date || credit || debit || balance\n16/12/2019 || || 500.00 || 2500.00\n16/12/2019 || 2000.00 || || 3000.00\n16/12/2019 || 1000.00 || || 1000.00")
-
   end
 
 end

@@ -10,13 +10,13 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    deposit = Transaction.new("deposit", amount, @balance).create
+    deposit = Transaction.new("deposit", amount, @balance).format
     @statement.add(deposit)
   end
 
   def withdraw(amount)
     @balance -= amount
-    withdrawal = Transaction.new("withdrawal", amount, @balance).create
+    withdrawal = Transaction.new("withdrawal", amount, @balance).format
     @statement.add(withdrawal)
   end
 
