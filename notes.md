@@ -24,6 +24,7 @@ date || credit || debit || balance
 **Tests**
 
 INPUT                     =>          OUTPUT
+
 account.deposit(100)      =>          date || credit || debit || balance
                                       16/12/2019 || 100.00 ||  || 100.00
 
