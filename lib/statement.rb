@@ -9,9 +9,9 @@ class Statement
   end
 
   def print
-    header = "date || credit || debit || balance"
+    statement_header = "date || credit || debit || balance"
     printed_statement = @transaction_history.reverse.join("\n")
-    "#{header}\n#{printed_statement}"
+    "#{statement_header}\n#{printed_statement}"
   end
 
 end
