@@ -25,6 +25,8 @@ date || credit || debit || balance
 
 INPUT                     =>          OUTPUT
 
+[no input]                =>          date || credit || debit || balance
+
 account.deposit(100)      =>          date || credit || debit || balance
                                       16/12/2019 || 100.00 ||  || 100.00
 
