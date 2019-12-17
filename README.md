@@ -10,9 +10,12 @@
 * Fork and clone this repository
 * Type `bundle install` in the command line
 
+**To run the tests**
+* Type `rspec` in the command line
+
 **To run this program**
 * Navigate to the project directory in your command line
-* Open IRB and type `require /lib/account.rb`
+* Open IRB and type `require '/lib/account.rb'`
 * Define a new instance of the Account class (e.g. `my_account = Account.new`)
 <br>
 As a user/account owner, you have only 3 actions:
@@ -21,7 +24,6 @@ As a user/account owner, you have only 3 actions:
 * .print_statement (e.g. `my_account.print_statement`)
 
 **Flow of code**
-
 The code has 3 classes: Account, Transaction and Statement.<br>
 The user only interacts with the Account class, via the methods above.
 
@@ -48,3 +50,10 @@ The `.print` method prints the hard-coded header, and all the transactions in th
 <br>
 
 When the user calls `my_account.withdraw(amount)` or `my_account.deposit(amount)`, this creates a new instance of the Transaction class, and calls the `transaction.format` method. This formatted string is then added to the `transaction_history` array of the Statement instance.
+
+**My approach**
+I initially sketched out a diagram of the different objects (Classes) I thought would be involved in the program: Account, Transaction and Statement. I then added the different methods and properties I thought would be necessary for each class.
+
+I then created a notes.md file, where I took down the details from the tech test, as well as the acceptance criteria. I also wrote up my own simpler input-output tests to build up to the Acceptance Criteria.
+
+My program is TDD, and I followed the red-green-refactor process quite strictly. I started with the account_spec.rb tests. Once my tests were passing, I decided it would be better to refactor the code into separate classes. I created the Transaction class and then the Statement class, via TDD.
