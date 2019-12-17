@@ -4,7 +4,6 @@ require_relative 'transaction'
 require_relative 'statement'
 
 class Account
-
   def initialize
     @balance = 0
     @statement = Statement.new
@@ -12,18 +11,17 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    deposit = Transaction.new("deposit", amount, @balance).format
+    deposit = Transaction.new('deposit', amount, @balance).format
     @statement.add(deposit)
   end
 
   def withdraw(amount)
     @balance -= amount
-    withdrawal = Transaction.new("withdrawal", amount, @balance).format
+    withdrawal = Transaction.new('withdrawal', amount, @balance).format
     @statement.add(withdrawal)
   end
 
   def print_statement
     @statement.print
   end
-
 end

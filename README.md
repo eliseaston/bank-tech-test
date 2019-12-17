@@ -4,6 +4,7 @@
 * Ruby
 * RSpec
 * SimpleCov
+* Rubocop
 
 **To install this program**
 * Fork and clone this repository

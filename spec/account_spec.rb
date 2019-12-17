@@ -6,7 +6,7 @@ describe Account do
   let(:my_account) { described_class.new }
 
   before(:each) do
-    @today_date = Time.now.strftime("%d/%m/%Y")
+    @today_date = Time.now.strftime('%d/%m/%Y')
   end
 
   it 'prints an empty statement when there is no bank activity' do
@@ -35,5 +35,4 @@ describe Account do
     my_account.withdraw(500)
     expect(my_account.print_statement).to eq("date || credit || debit || balance\n#{@today_date} || || 500.00 || 2500.00\n#{@today_date} || 2000.00 || || 3000.00\n#{@today_date} || 1000.00 || || 1000.00")
   end
-
 end

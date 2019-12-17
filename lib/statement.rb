@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Statement
-
   def initialize
     @transaction_history = []
   end
@@ -11,9 +10,8 @@ class Statement
   end
 
   def print
-    statement_header = "date || credit || debit || balance"
+    statement_header = 'date || credit || debit || balance'
     printed_statement = @transaction_history.reverse.join("\n")
     "#{statement_header}\n#{printed_statement}"
   end
-
 end
