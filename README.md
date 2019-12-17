@@ -15,13 +15,15 @@
 
 **To run this program**
 * Navigate to the project directory in your command line
-* Open IRB and type `require '/lib/account.rb'`
+* Type `irb -r ./lib/account.rb`
 * Define a new instance of the Account class (e.g. `my_account = Account.new`)
 <br>
 As a user/account owner, you have only 3 actions:
 * .deposit(amount) (e.g. `my_account.deposit(50`)
 * .withdraw(amount) (e.g. `my_account.withdraw(10)`)
 * .print_statement (e.g. `my_account.print_statement`)
+
+[Program in action](https://photos.google.com/photo/AF1QipMTzDh81W8GAEDIXmKtqA9ZR0xMXz7FGt6Nexk)
 
 **Flow of code**
 The code has 3 classes: Account, Transaction and Statement.<br>
@@ -52,7 +54,7 @@ The `.print` method prints the hard-coded header, and all the transactions in th
 When the user calls `my_account.withdraw(amount)` or `my_account.deposit(amount)`, this creates a new instance of the Transaction class, and calls the `transaction.format` method. This formatted string is then added to the `transaction_history` array of the Statement instance.
 
 **My approach**
-I initially sketched out a diagram of the different objects (Classes) I thought would be involved in the program: Account, Transaction and Statement. I then added the different methods and properties I thought would be necessary for each class.
+I initially sketched out a [diagram](https://photos.google.com/photo/AF1QipNbG1mt1b_S-0Ff7yKs0k5Cyut6m9tsSnG-3U8) of the different objects (Classes) I thought would be involved in the program: Account, Transaction and Statement. I then added the different methods and properties I thought would be necessary for each class.
 
 I then created a notes.md file, where I took down the details from the tech test, as well as the acceptance criteria. I also wrote up my own simpler input-output tests to build up to the Acceptance Criteria.
 
