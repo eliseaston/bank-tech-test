@@ -3,11 +3,17 @@
 **Tech used**
 * Ruby
 * RSpec
+* SimpleCov
+
+**To install this program**
+* Fork and clone this repository
+* Type `bundle install` in the command line
 
 **To run this program**
-* Fork and clone this repository
+* Navigate to the project directory in your command line
 * Open IRB and type `require /lib/account.rb`
-* Define a new instance of the Account class (e.g. `my_account = Account.new`)<br>
+* Define a new instance of the Account class (e.g. `my_account = Account.new`)
+<br>
 As a user/account owner, you have only 3 actions:
 * .deposit(amount) (e.g. `my_account.deposit(50`)
 * .withdraw(amount) (e.g. `my_account.withdraw(10)`)
