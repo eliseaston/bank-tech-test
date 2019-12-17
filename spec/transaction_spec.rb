@@ -4,7 +4,7 @@ require 'transaction'
 
 describe Transaction do
   before(:each) do
-    @today_date = Time.now.strftime('%d/%m/%Y')
+    @today_date = Time.now.getlocal.strftime('%d/%m/%Y')
   end
 
   it 'creates a new withdrawal transaction in the correct || format for the statement' do

@@ -6,7 +6,7 @@ describe Account do
   let(:my_account) { described_class.new }
 
   before(:each) do
-    @today_date = Time.now.strftime('%d/%m/%Y')
+    @today_date = Time.now.getlocal.strftime('%d/%m/%Y')
   end
 
   it 'prints an empty statement when there is no bank activity' do
