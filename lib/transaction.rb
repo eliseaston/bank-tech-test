@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Transaction
 
   def initialize(trans_type, amount, balance, date=Time.now.strftime("%d/%m/%Y"))
